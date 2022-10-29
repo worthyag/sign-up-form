@@ -7,7 +7,7 @@
     --colour-bg: #EEEEEE;
     --colour-on-bg: #333333;
     --colour-primary: #DF684E;
-    --colour-primary-bg: #DA967B;
+    --colour-primary-bg: #B65129;
     --colour-error: #DB3131;
     --colour-heading: #A6780B;
     --colour-outline: #CCCCCC; 
@@ -29,6 +29,7 @@ body {
     background: var(--colour-bg);
     width: 100vw;
     height: 100vh;
+    font-family: var(--font-primary);
 }
 
 div.container {
@@ -168,12 +169,41 @@ div.form form label {
 div.form form div > p.error {
     font-size: 14px;
     color: var(--colour-error);
-    /* background-color: black; */
-    /* color: #fff; */
     margin-bottom: 8px;
     height: 20px;
 }
 
 div.main div.submit {
-    background-color: rgb(240, 165, 52);
+    padding: 64px 0 64px 32px;
+}
+
+div.main div.submit > button {
+    padding: 16px 32px;
+    background-color: var(--colour-primary-bg);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 16px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    font-weight: bold;
+    margin-bottom: 32px;
+}
+
+div.main div.submit > button:hover {
+    background-color: var(--colour-primary);
+    cursor: pointer;
+}
+
+div.main div.submit > p {
+    font-weight: 500;
+}
+
+div.main div.submit > p > span {
+    color: #ae462e;
+    font-weight: bold;
+    margin: 0 8px;
+    cursor: pointer;
+}
+
+div.main div.submit > p > span:hover {
+    color: var(--colour-on-bg);
 }
