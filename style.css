@@ -4,12 +4,63 @@
 /* CSS Variables */
 :root {
     /* Colours */
-    --bg-colour: #EEEEEE;
-    --on-bg-colour: #333333;
-    --primary-colour: #EC7950;
-    --primary-bg-colour: #DA967B;
-    --error-colour: #ED5B5B;
-    --heading-colour: #B08212;
-    --outline-colour: #CCCCCC; 
-    --label-colour: #555555;
+    --colour-bg: #EEEEEE;
+    --colour-on-bg: #333333;
+    --colour-primary: #EC7950;
+    --colour-primary-bg: #DA967B;
+    --colour-error: #ED5B5B;
+    --colour-heading: #B08212;
+    --colour-outline: #CCCCCC; 
+    --colour-label: #555555;
+
+    /* Fonts */
+    --font-heading: 'Oleo Script Swash Caps', cursive;
+    --font-primary: 'IBM Plex Sans', sans-serif;
+    --font-secondary: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--colour-bg);
+    width: 100vw;
+}
+
+div.container {
+    background-color: var(--colour-primary);
+    width: 100%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    height: 100vh;
+}
+
+div.sidebar {
+    background: url(./img/bg-img.png) no-repeat center center/ cover;
+}
+
+div.sidebar div.heading {
+    background-color: #eeeeeeaa;
+    display: flex;
+    margin-top: 30%;
+    padding-left: 27%;
+}
+
+div.sidebar div.heading img {
+    width: 70px;
+    padding-top: 8px;
+}
+
+div.sidebar div.heading h1 {
+    font-family: var(--font-heading);
+    color: var(--colour-heading);
+    font-size: 48px;
+    padding: 32px 32px 32px 16px;
+}
+
+div.main {
+    background-color: rgb(237, 100, 184);
 }
