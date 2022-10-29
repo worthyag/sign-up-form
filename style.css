@@ -207,3 +207,15 @@ div.main div.submit > p > span {
 div.main div.submit > p > span:hover {
     color: var(--colour-on-bg);
 }
+
+footer {
+    width: 100%;
+    background-color: #111111;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+#github-name {
+    font-weight: bold;
+    color: #FFFFFF;
+}
