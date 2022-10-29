@@ -31,7 +31,6 @@ body {
 }
 
 div.container {
-    background-color: var(--colour-primary);
     width: 100%;
     display: grid;
     grid-template-columns: 40% 60%;
@@ -62,5 +61,37 @@ div.sidebar div.heading h1 {
 }
 
 div.main {
-    background-color: rgb(237, 100, 184);
+    display: grid;
+    grid-template-rows: 1fr 1.5fr 1fr;
+}
+
+div.main div.msg {
+    font-family: var(--font-primary);
+    font-weight: bold;
+    color: var(--colour-on-bg);
+    font-size: 16px;
+    line-height: 24px;
+    padding: 64px 32px;
+}
+
+div.main div.msg p {
+    width: 70%;
+}
+
+div.main div.msg p span {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    padding: 0 2px;
+}
+
+div.main div.msg p:last-child {
+    margin-top: 24px;
+}
+
+div.main div.form {
+    background-color: rgb(100, 84, 218);
+}
+
+div.main div.submit {
+    background-color: rgb(240, 165, 52);
 }
