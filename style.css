@@ -1,0 +1,15 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&family=Inter:wght@400;600&family=Oleo+Script+Swash+Caps:wght@400;700&display=swap');
+
+/* CSS Variables */
+:root {
+    /* Colours */
+    --bg-colour: #EEEEEE;
+    --on-bg-colour: #333333;
+    --primary-colour: #EC7950;
+    --primary-bg-colour: #DA967B;
+    --error-colour: #ED5B5B;
+    --heading-colour: #B08212;
+    --outline-colour: #CCCCCC; 
+    --label-colour: #555555;
+}
