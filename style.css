@@ -6,10 +6,10 @@
     /* Colours */
     --colour-bg: #EEEEEE;
     --colour-on-bg: #333333;
-    --colour-primary: #EC7950;
+    --colour-primary: #DF684E;
     --colour-primary-bg: #DA967B;
-    --colour-error: #ED5B5B;
-    --colour-heading: #B08212;
+    --colour-error: #DB3131;
+    --colour-heading: #A6780B;
     --colour-outline: #CCCCCC; 
     --colour-label: #555555;
 
@@ -28,6 +28,7 @@
 body {
     background: var(--colour-bg);
     width: 100vw;
+    height: 100vh;
 }
 
 div.container {
@@ -38,29 +39,37 @@ div.container {
 }
 
 div.sidebar {
+    height: 100vh;
     background: url(./img/bg-img.png) no-repeat center center/ cover;
 }
 
 div.sidebar div.heading {
     background-color: #eeeeeeaa;
     display: flex;
-    margin-top: 30%;
+    height: 150px;
+    margin-top: calc((100vh / 3) - 150px - 15px);
     padding-left: 27%;
+    
 }
 
 div.sidebar div.heading img {
-    width: 70px;
+    width: 80px;
     padding-top: 8px;
 }
 
 div.sidebar div.heading h1 {
     font-family: var(--font-heading);
     color: var(--colour-heading);
-    font-size: 48px;
+    font-size: 64px;
     padding: 32px 32px 32px 16px;
 }
 
+div.sidebar div.heading h1:hover {
+    color: var(--colour-primary);
+}
+
 div.main {
+    height: 100vh;
     display: grid;
     grid-template-rows: 1fr 1.5fr 1fr;
 }
@@ -84,12 +93,85 @@ div.main div.msg p span {
     padding: 0 2px;
 }
 
+div.main div.msg p span:hover {
+    color: var(--colour-primary);
+}
+
 div.main div.msg p:last-child {
     margin-top: 24px;
 }
 
 div.main div.form {
-    background-color: rgb(100, 84, 218);
+    background-color: #FFFFFF;
+}
+
+div.main div.form form {
+    display: grid;
+    height: 100%;
+    grid-template-rows: 40px 1fr;
+    grid-template-columns: repeat(2, 1fr) 250px;
+    grid-template-areas: 
+    "heading heading heading"
+    "col1 col2 .";
+    font-family: var(--font-secondary);
+    font-weight: 600;
+    color: var(--colour-label);
+}
+
+div.form form h4 {
+    grid-area: heading;
+    font-family: var(--font-heading);
+    color: var(--colour-primary);
+    margin: 16px 32px;
+    font-size: 20px;
+}
+
+div.form form div > div {
+    width: 250px;
+    margin: 16px 32px;
+}
+
+div.form form div > input {
+    width: 100%;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 2px solid var(--colour-outline);
+    margin-bottom: 4px;
+}
+
+div.form form div > input:hover {
+    background-color: var(--colour-bg);
+}
+
+div.form form div > input[type="password"] {
+    border: 2px solid var(--colour-error);
+}
+
+div.form form div > input:invalid {
+    border-color: var(--colour-error);
+}
+
+div.form form div.col-1 {
+    grid-area: col1;
+}
+
+div.form form div.col-2 {
+    grid-area: col2;
+}
+
+div.form form label {
+    text-transform: uppercase;
+    display: block;
+    font-size: 12px;
+}
+
+div.form form div > p.error {
+    font-size: 14px;
+    color: var(--colour-error);
+    /* background-color: black; */
+    /* color: #fff; */
+    margin-bottom: 8px;
+    height: 20px;
 }
 
 div.main div.submit {
