@@ -1,5 +1,5 @@
 # sign-up-form
-A sign-up form for a mock site.  
+A sign-up form for a mock site. View live [here](https://worthyag.github.io/sign-up-form/).  
   
 #### Site in Action. 
 **Before**
